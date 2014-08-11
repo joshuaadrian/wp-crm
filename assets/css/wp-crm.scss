@@ -1,0 +1,455 @@
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#wpcf-marketing, .editform {
+	display:none !important;
+}
+
+#user_show_permissions, #user_prod_permissions {
+	width: 25em;
+}
+
+.loader {
+	position: relative;
+	top:-40px;
+	margin:0 0 0 4px;
+}
+
+.menu_sf {
+	margin-right:5px;
+}
+
+.sf_pagination {
+	margin: 40px 0 0 20px;
+}
+
+.sf_pagination li {
+	float:left;
+	margin:0 10px -1px 0;
+	padding:15px;
+	border-left:1px solid #aaa;
+	border-top:1px solid #aaa;
+	border-right:1px solid #aaa;
+	border-bottom:1px solid #aaa;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color:  #fff
+}
+
+.sf_pagination li.sf-active {
+	background-color: #f5f5f5;
+	border-bottom:1px solid #f5f5f5;
+	box-shadow: 1px -1px 2px #ddd;
+}
+
+.sf_pagination li a {
+	display: block;
+	padding:0 0 0 30px;
+	text-decoration: none;
+	font-weight: bold;
+	color:#ccc;
+	height:24px;
+	line-height: 24px;
+	background:url(../images/sf-sprite.png) 0px 0px no-repeat;
+}
+
+.sf_pagination li.sf-active a {
+	color:#8a8a8a;
+}
+
+.sf_pagination li#sf-pagination-twitter a {
+	background-position: 0px -71px;
+}
+
+.sf_pagination li#sf-pagination-facebook a {
+	background-position: 0px -24px;
+}
+
+.sf_pagination li#sf-pagination-instagram a {
+	background-position: 0px -118px;
+}
+
+.sf_pagination li#sf-pagination-help a {
+	background-position: 0px -165px;
+}
+
+.sf_pagination li#sf-pagination-settings a {
+	background-position: 0px -212px;
+}
+
+.sf_pagination li.sf-active#sf-pagination-twitter a {
+	background-position: 0px -47px;
+}
+
+.sf_pagination li.sf-active#sf-pagination-facebook a {
+	background-position: 0px 0px;
+}
+
+.sf_pagination li.sf-active#sf-pagination-instagram a {
+	background-position: 0px -94px;
+}
+
+.sf_pagination li.sf-active#sf-pagination-help a {
+	background-position: 0px -141px;
+}
+
+.sf_pagination li.sf-active#sf-pagination-settings a {
+	background-position: 0px -188px;
+}
+
+.sf_content {
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+	margin:0;
+	padding:20px 0 40px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-image: linear-gradient(bottom, rgb(230,230,230) 20%, rgb(245,245,245) 80%);
+	background-image: -o-linear-gradient(bottom, rgb(230,230,230) 20%, rgb(245,245,245) 80%);
+	background-image: -moz-linear-gradient(bottom, rgb(230,230,230) 20%, rgb(245,245,245) 80%);
+	background-image: -webkit-linear-gradient(bottom, rgb(230,230,230) 20%, rgb(245,245,245) 80%);
+	background-image: -ms-linear-gradient(bottom, rgb(230,230,230) 20%, rgb(245,245,245) 80%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.2, rgb(230,230,230)),
+		color-stop(0.8, rgb(245,245,245))
+	);
+}
+
+.sf_content li {
+	display: none;
+	padding:0;
+	margin:0;
+}
+
+.sf_content li.sf-active {
+	display: block;
+}
+
+.sf_content .form-table th {
+	padding: 10px 10px 10px 20px;
+}
+
+.sf_content textarea, .sf_content input[type="text"], .sf_content input[type="password"], .sf_content input[type="file"], .sf_content input[type="button"], .sf_content input[type="submit"], .sf_content input[type="reset"], .sf_content input[type="email"], .sf_content input[type="number"], .sf_content input[type="search"], .sf_content input[type="tel"], .sf_content input[type="url"], .sf_content select {
+	border-color: #aaa;
+}
+
+.social-feeds-copy {
+	padding:0 0 20px;
+}
+
+#social-feeds-options-form p.submit {
+	border: 1px solid #999;
+	text-align: right;
+	margin:0;
+	padding:20px;
+	display: block;
+	background-color: #ccc;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.credits {
+	margin-top: 40px;
+	border-top: 1px solid #ccc;
+}
+
+.credits p {
+	height:40px;
+	line-height: 100%;
+}
+
+.testimonial-shortcode {
+
+	resize:none;
+	width: 100%;
+	border: 1px solid #999;
+	margin-top: 5px;
+	padding: 5px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	background: #fff;
+	height: 30px;
+
+}
+
+#menu-comments, #menu-posts {
+	// display:none;
+}
+
+#social-feeds-theme-options-icon {
+	float: left;
+	margin: 7px 10px 0 0;
+}
+
+#social-feeds-options-container {
+	background: #f5f5f5;
+	margin: 20px 0;
+	border-radius: 3px;
+	padding: 7px 10px 20px;
+	border: 1px solid #d5d5d5;
+}
+
+.social-feeds-or {
+	//text-align: center;
+}
+
+/************************************************************************/
+/* ADMIN PANEL STYLES
+/************************************************************************/
+.social-feeds-updated {
+
+	background-color: #ffffe0;
+	border-color: #e6db55;
+	margin: 10px 15px 0 0;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border-width: 1px;
+	border-style: solid;
+	padding: 0 0.6em;
+
+	p {
+
+		margin: 0.5em 0;
+		padding: 2px;
+
+	}
+
+}
+
+#social-feeds-options {
+
+	h2.nav-tab-wrapper,
+	h3.nav-tab-wrapper {
+		margin-bottom: -1px;
+
+		a {
+
+			background: #f5f5f5;
+
+			&.nav-tab:hover,
+			&.nav-tab-active {
+				border-color: #ccc #ccc #f5f5f5;
+			}
+
+		}
+
+	}
+
+	.social-feeds-options-section {
+		
+		border: 1px solid #ccc;
+		padding: 10px 20px 0;
+		margin: 0;
+		border-radius: 0 0 3px 3px;
+		background: #f5f5f5;
+
+		h3 {
+
+			small {
+
+				font-weight: normal;
+
+			}
+
+		}
+
+		.social-feeds-admin-or {
+			padding: 0 10px 5px;
+		}
+
+		.social-feeds-form-action {
+
+			margin:20px -20px 0;
+			background: #d5d5d5;
+			border-top:1px solid #ccc;
+
+			.status {
+
+				float:left;
+				padding:6px 0 0 20px;
+
+				span {
+					border-radius: 100%;
+					text-indent: -999px;
+					display:inline-block;
+					height:20px;
+					width:20px;
+					margin:0 5px;
+					position: relative;
+					top: 7px;
+					border:2px solid #fff;
+				}
+
+				span.success {
+					background-color: green;
+					
+				}
+
+				span.error {
+					background-color: red;
+				}
+
+				span.none {
+					background-color: #c5c5c5;
+				}
+
+			}
+
+			p {
+
+				text-align: right;
+				padding:10px;
+				margin:0;
+
+				button {
+					margin-right:20px;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/************************************************************************/
+/* ADMIN UI STYLES
+/************************************************************************/
+
+#homepage-secondary-sections,
+#ticket-locations,
+#parking-locations {
+
+	margin: 0;
+	display: inline-block;
+	min-width: 100%;
+	padding: 0px;
+
+	li {
+
+		margin: 0;
+		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #fff;
+		width: 25%;
+		float: left;
+		min-height: 120px;
+		box-sizing: border-box;
+		padding: 10px;
+		background:#f0f0f0;
+
+		&:nth-child(odd) {
+			background:#fcfcfc;
+		}
+
+		&.homepage-secondary-section {
+
+			position:relative;
+			height:100%;
+			display:block;
+
+			@media (max-width: 1400px) {
+				min-height: 160px;
+			}
+
+			@media (max-width: 1200px) {
+				min-height: 200px;
+			}
+
+			@media (max-width: 900px) {
+				min-height: 240px;
+			}
+
+			.homepage_secondary_section_delete {
+
+				height:auto;
+				min-height:auto;
+				position:absolute;
+				background: #ddd;
+				border-radius: 3px;
+				padding: 0 3px;
+				bottom:10px;
+				right:10px;
+				font-size:1em;
+
+				label {
+					height:auto;
+					min-height:inherit;
+				}
+
+			}
+
+			select,
+			.social-feeds-file-uploader {
+
+				margin: 10px 0;
+
+			}
+
+			.social-feeds-file-uploader {
+
+				input[type="text"] {
+					max-width: 100%;
+				}
+
+			}
+
+			select {
+				max-width: 100%;
+			}
+
+		}
+
+		label {
+
+			position:relative;
+			height:100%;
+			display:block;
+
+			@media (max-width: 1400px) {
+				min-height: 160px;
+			}
+
+			@media (max-width: 1200px) {
+				min-height: 200px;
+			}
+
+			@media (max-width: 900px) {
+				min-height: 240px;
+			}
+
+			.ticket-locations-delete,
+			.parking-locations-delete {
+				position:absolute;
+				background: #ddd;
+				border-radius: 3px;
+				padding: 0 3px;
+				bottom:0px;
+				right:0px;
+				font-size:1em;
+			}
+
+		}
+
+	}
+
+}
