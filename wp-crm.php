@@ -21,10 +21,31 @@ if ( !function_exists('_log') ) {
   }
 }
 
+require_once plugin_dir_path( __FILE__ ) . '../../../wp-load.php';
+
+if ( file_exists( ABSPATH . 'wp-config.php') ) {
+	require_once( ABSPATH . 'wp-config.php' );
+}
+
+require_once(ABSPATH . 'wp-admin/includes/template.php' );
+
+if( !class_exists( 'WP_Screen' ) ) {
+	require_once( ABSPATH . 'wp-admin/includes/screen.php' );
+}
+
+if ( !class_exists( 'WP_List_Table' ) ){
+	require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
+}
+
+require_once( plugin_dir_path( __FILE__ ) . 'assets/classes/class-lead-list-table.php' );
+$lead_list_table = new Lead_List_Table();
+		$lead_list_table->prepare_items();
+
 class wp_crm {
 
 	public $wp_crm_db_version;
 	public $wp_crm_options;
+	public $lead_list_table;
 
 	public function __construct() {
 		$this->wp_crm_db_version = '1.0';
@@ -122,7 +143,7 @@ class wp_crm {
 	}
 
 	public function wp_crm_add_options_page() {
-    add_menu_page( WP_CRM_PLUGINOPTIONS_NICK, 'Leads', 'manage_options', WP_CRM_PLUGINOPTIONS_ID, 'wp_crm_render_form', 'dashicons-groups', 100 );
+    add_menu_page( WP_CRM_PLUGINOPTIONS_NICK, 'Leads', 'manage_options', WP_CRM_PLUGINOPTIONS_ID, array( $this, 'wp_crm_render_lead_table' ), 'dashicons-groups', 100 );
     add_submenu_page( WP_CRM_PLUGINOPTIONS_ID, WP_CRM_PLUGINOPTIONS_NICK, 'Lead Syncs', 'manage_options', 'lead-syncs', array( $this, 'wp_crm_render_form' ) );
     add_submenu_page( WP_CRM_PLUGINOPTIONS_ID, WP_CRM_PLUGINOPTIONS_NICK, 'Lead API Requests', 'manage_options', 'lead-requests', array( $this, 'wp_crm_render_form' ) );
     add_submenu_page( WP_CRM_PLUGINOPTIONS_ID, WP_CRM_PLUGINOPTIONS_NICK, 'Lead Backups', 'manage_options', 'lead-backups', array( $this, 'wp_crm_render_form' ) );
@@ -132,6 +153,19 @@ class wp_crm {
 	public function wp_crm_render_form() {
 
 	}
+
+	public function wp_crm_render_lead_table() {
+
+		echo '<div class="wrap"><h2>Leads	<a href="lead-new.php" class="add-new-h2">Add New</a></h2><form action="" method="get">';
+		$lead_list_table = new Lead_List_Table();
+		$lead_list_table->prepare_items();
+		$lead_list_table->search_box( 'Search Leads' );
+		$lead_list_table->display();
+		echo '</form></div>';
+
+	}
+
+
 
 	public function wp_crm_validate_options( $input ) {
 
