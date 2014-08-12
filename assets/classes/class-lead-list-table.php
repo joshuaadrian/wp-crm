@@ -130,7 +130,7 @@ class Lead_List_Table extends WP_List_Table {
           switch ( $column_name ) {
             case "col_lead_id" :  echo '<td '.$attributes.'>'.stripslashes($rec->id).'</td>';   break;
             case "col_lead_time" : echo '<td '.$attributes.'>'.$rec->time.'</td>'; break;
-            case "col_lead_name" : echo '<td '.$attributes.'>'.stripslashes($rec->name).'5</td>'; break;
+            case "col_lead_name" : echo '<td '.$attributes.'>'.stripslashes($rec->name).'</td>'; break;
             case "col_lead_text" : echo '<td '.$attributes.'>'.$rec->text.'</td>'; break;
             case "col_lead_url" : echo '<td '.$attributes.'>'.stripslashes($rec->url).'</td>'; break;
           }
